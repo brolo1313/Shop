@@ -3,7 +3,7 @@
 
     <div class="form-control">
         <label for="email">Email</label>
-        <input id="email" type="email" formControlName="email">
+        <input id="email" type="email" formControlName="email" autocomplete="on">
         <div *ngIf="form.controls['email'].touched && form.controls['email'].invalid" class="validation">
             <small *ngIf="form.controls['email'].hasError('required')">Please enter email</small>
             <small *ngIf="form.controls['email'].hasError('email')">Enter valid email</small>
@@ -22,5 +22,5 @@
     </div>
 
     <button type="submit" class="btn btn-primary btn-block" 
-            [disabled]="form.invalid">LogOn</button>
+            [disabled]="form.invalid || submited">LogOn</button>
 </form>
