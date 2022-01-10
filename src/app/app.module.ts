@@ -10,6 +10,7 @@ import { CardPageComponent } from './card-page/card-page.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { QuillModule } from 'ngx-quill';
 import { AuthInterceptor } from './shared/auth.interceptor';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AuthInterceptor } from './shared/auth.interceptor';
     MainLayoutComponent,
     MainPageComponent,
     ProductPageComponent,
-    CardPageComponent
+    CardPageComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
