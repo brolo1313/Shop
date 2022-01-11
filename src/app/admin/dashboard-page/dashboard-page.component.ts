@@ -33,11 +33,10 @@ export class DashboardPageComponent implements OnInit {
 
   remove(id:any){
     this.rSub = this.productService.remove(id).subscribe(() => {
-      this.products = this.products.filter((product:any) => {
+      this.products = this.products.filter((product:any) => 
         product.id !== id
-        console.log('id елемента которий удаляем:' + id);
-        console.log('сравниваем id которий в базе:' + product);
-      })
+       
+      )
     })
   }
 
