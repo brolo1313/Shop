@@ -1,4 +1,4 @@
-<div *ngIf="product$ | async as products;">
+<div *ngIf="product$ | async as products; else loading">
   <div class="product">
       <div class="header right">
           <button routerLink="/" class="btn btn-dark">Back</button>
@@ -28,4 +28,6 @@
   </div>
 </div>
 
-<div #loading>Not add poruduct</div>
+<ng-template #loading>
+  <p class="text-center">Loading...</p>
+</ng-template>
