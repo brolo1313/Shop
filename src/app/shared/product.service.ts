@@ -9,6 +9,8 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductService {
 
+  type = "Phone";
+
   constructor(private http:HttpClient) { }
 
   creat(product:any){
@@ -51,5 +53,9 @@ export class ProductService {
 
   update(product:Product){
     return this.http.patch(`${environment.fbDbUrl}/products/${product.id}.json`, product)
+  }
+
+  setType(type:any){
+    this.type = type;
   }
 }
