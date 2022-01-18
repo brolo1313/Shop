@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/shared/product.service';
 export class DashboardPageComponent implements OnInit {
 
   products:any=[]
+  productName!:any
   pSub:Subscription | undefined
   rSub:Subscription | undefined
 

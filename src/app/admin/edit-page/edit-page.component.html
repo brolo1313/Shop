@@ -1,3 +1,6 @@
+<div>
+    <button class="btn btn-primary" [routerLink]="['/admin/dashboard']">Назад</button>
+</div>
 <div *ngIf="form; else loading">
     <form [formGroup]="form"  (ngSubmit)="submit()">
         <h2 class="text-center">Edit product</h2>
